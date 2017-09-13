@@ -7,12 +7,28 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Product</ion-title>
+    <ion-title>Nutrition information</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title text-wrap>
+        <h1>{{name}}</h1>
+      </ion-card-title>
+      <ion-item>
+        <h2>Ingredients</h2>
+      </ion-item>
+      <ion-list>
+        <ion-item *ngFor = "let ingredient of ingredients">
+          <p>{{ingredient}}</p>
+        </ion-item>
+      </ion-list>
 
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>

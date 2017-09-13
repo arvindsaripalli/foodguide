@@ -67,9 +67,9 @@ export class HomePage {
         var response = JSON.parse(res["_body"]);
 
         console.log("Search from UPC API successful");
-        console.log(JSON.stringify(response));
+        console.log(response["foods"][0]["food"]);
 
-        this.showProduct(response);
+        this.showProduct(response["foods"][0]["food"]);
 
       }, (err) => {
         console.log(JSON.stringify(err));
